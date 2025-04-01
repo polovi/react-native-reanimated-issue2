@@ -1,5 +1,5 @@
 import React from 'react';
-import {ColorValue, View} from 'react-native';
+import {ColorValue, Text, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 
 function App() {
@@ -10,11 +10,14 @@ function App() {
           <Animated.View
             key={`view-with-color-${key}`}
             style={{
-              width: 50,
-              height: 50,
+              width: 100,
+              height: 100,
+              justifyContent: 'center',
+              alignItems: 'center',
               backgroundColor: Colors[key],
-            }}
-          />
+            }}>
+            <Text>{key}</Text>
+          </Animated.View>
         ))}
       </View>
     </View>
